@@ -18,6 +18,8 @@ package controllers
 
 import (
 	"context"
+	"fmt"
+	logging "log"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -50,7 +52,8 @@ func (r *RedisClusterReconciler) Reconcile(ctx context.Context, req ctrl.Request
 	_ = log.FromContext(ctx)
 
 	// TODO(user): your logic here
-
+	fmt.Println("Let's start Reconcile for RedisCluster CR type")
+	logging.Println("Let's start Reconcile for RedisCluster CR type")
 	return ctrl.Result{}, nil
 }
 
