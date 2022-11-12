@@ -1,5 +1,7 @@
 <h1>K8S Custom Controller</h1>
 
+As pre-requisite, operator-sdk need initial go modules.
+
 ```go 
 go mod init k8s-operator
 go mod tidy
@@ -10,6 +12,7 @@ operator-sdk init --domain k8s-operator.com
 operator-sdk create api --group redis-cluster --version v1 --kind RedisCluster --resource --controller
 make manifests
 ```
+
 ``make manifests`` should be done after modifying the ``*_types.go`` file
 
 ```go 
@@ -23,6 +26,7 @@ type RedisClusterStatus struct {
 	NumOfRedisNodes string `json:"cluster_size,omitempty"`
 }
 ```
+
 Following ``yaml`` file was generated through ``make manifests``
 
 ```yaml
