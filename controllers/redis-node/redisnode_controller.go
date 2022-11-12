@@ -18,6 +18,8 @@ package redisnode
 
 import (
 	"context"
+	"fmt"
+	logging "log"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -49,7 +51,8 @@ type RedisNodeReconciler struct {
 func (r *RedisNodeReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	_ = log.FromContext(ctx)
 
-	// TODO(user): your logic here
+	fmt.Println("Let's start Reconcile for RedisNode CR type")
+	logging.Println("Let's start Reconcile for RedisNode CR type")
 
 	return ctrl.Result{}, nil
 }
