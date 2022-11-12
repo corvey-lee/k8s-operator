@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- redis-cluster_v1_rediscluster.yaml
+- redis-node_v1_redisnode.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
